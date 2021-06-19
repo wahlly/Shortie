@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://wahlly:wale36983@cluster0.s66wb.mongodb.net/shortie?retryWrites=true&w=majority",
+    "baseUrl": "http://localhost:5000"
+}
