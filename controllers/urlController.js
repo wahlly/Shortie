@@ -1,3 +1,4 @@
+const c = require('config')
 const UrlService = require('../services/urlService')
 
 module.exports = class urlController{
@@ -7,13 +8,15 @@ module.exports = class urlController{
             if(!url) {
                 return res.status(400).json('Invalid url, please check your url and try again')
             }
-            return res.status(200).json({
-                status: 'success',
-                url
-            })
+            res.render('modifiedUrl', {url})
+            // return res.status(200).json({
+            //     status: 'success',
+            //     url
+            // })
         }
         catch(err) {
-            return res.status(500).json('Server error, try again later!')
+            console.error(err)
+            return res.status(500).json(err.message)
         }
     }
 
@@ -28,5 +31,9 @@ module.exports = class urlController{
         catch(err) {
             return res.status(500).json('server error')
         }
+    }
+
+    static async renderFrontPage(req, res) {
+        res.render('frontpage')
     }
 }

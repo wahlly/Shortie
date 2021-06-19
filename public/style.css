@@ -1,0 +1,49 @@
+#header {
+    text-align: center;
+    background-color: red;
+    margin-top: 0px;
+    height: 80px;
+}
+
+.container {
+    text-align: center;
+    height: 333px;
+    margin-top: 20px;
+}
+
+#longurl {
+    width: 500px;
+    height: 35px;
+    border-width: 2px 2px;
+    border-radius: 10px;
+}
+
+#submit {
+    width: 100px;
+    height: 35px;
+    border-width: 2px 2px;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+}
+
+#footer {
+    background-color: black;
+    height: 125px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+#trademark {
+    padding-top: 100px;
+    text-align: center;
+}
+
+#shorturl {
+    background-color: black;
+    color: white;
+    width: 250px;
+    height: 35px;
+    text-align: center;
+    text-align: center;
+}

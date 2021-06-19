@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Shortie</title>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <h1>Shortie</h1>
+            <h4>keep your urls simple and easy to share</h4>
+        </div>
+    </header>
+    <main class="container">
+        <form action="/api/url/short" method="POST">
+            <label for="longurl">
+            <input id="longurl" type="url" name="longurl" placeholder="https://example.com" pattern="https://.*">
+            </label> 
+            <button id="submit" type="submit"><a>Shorten Url</a></button>
+        </form>
+    </br> </br>
+        <input type="text" value="<%= url %>" id="shorturl">
+        <button  id="submit" onclick="copyUrl()">Copy text</button>
+    </main>
+    <footer>
+        <div id="footer">
+            <h4 id="trademark">made with <span style="color: red;">&hearts;</span> By wahllyWest</h4>
+        </div>
+    </footer>
+
+    <script>
+        function copyUrl() {
+        let copyText = document.getElementById("shorturl");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999) //for mobile view
+        document.execCommand("copy");
+        alert("Copied the text: " + copyText.value);
+        }
+    </script>
+</body>
+</html>
